@@ -14,42 +14,42 @@ class Transaction
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
-     * @Groups({ "show", "list"})
      */
     private $id;
 
     /**
      * @ORM\Column(type="integer")
-     * @Groups({ "show", "list"})
+     * @Groups({ "show"})
      */
     private $montant;
 
     /**
      * @ORM\Column(type="datetime")
-     * @Groups({ "show", "list"})
+     * @Groups({ "show"})
      */
     private $date;
 
     /**
      * @ORM\Column(type="integer")
-     * @Groups({ "show", "list"})
+     * @Groups({ "show"})
      */
     private $commiSystem;
 
     /**
      * @ORM\Column(type="integer")
-     * @Groups({ "show", "list"})
+     * @Groups({ "show"})
      */
     private $commiEtat;
 
     /**
      * @ORM\Column(type="integer")
-     * @Groups({ "show", "list"})
+     * @Groups({ "show"})
      */
     private $commiEvoie;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Compte", inversedBy="transactions")
+     * @Groups({ "show"})
      */
     private $compte;
 
@@ -60,34 +60,37 @@ class Transaction
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\ClientEnvoie", inversedBy="transactions")
+     * @Groups({ "show"})
      */
     private $clientEnvoie;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\ClientRetrait", inversedBy="transactions")
+     * @Groups({ "show"})
      */
     private $clientRetrait;
 
     /**
      * @ORM\Column(type="integer")
-     * @Groups({ "show", "list"})
+     * @Groups({ "show"})
      */
     private $commitRetrait;
 
     /**
      * @ORM\Column(type="integer")
-     * @Groups({ "show", "list"})
+     * @Groups({ "show"})
      */
     private $code;
 
     /**
      * @ORM\Column(type="integer")
-     * @Groups({ "show", "list"})
+     * @Groups({ "show"})
      */
     private $frais;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * * @Groups({ "show"})
      */
     private $statut;
 

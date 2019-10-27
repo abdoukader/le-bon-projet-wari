@@ -388,7 +388,9 @@ class PartenairesController extends AbstractController
     
       
 
-        return new JsonResponse($data, 200);
+        return new Response($data, 200, [
+            'Content-Type' => 'application/json'
+        ]);
     }
 
 }
